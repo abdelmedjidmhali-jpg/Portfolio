@@ -1,221 +1,201 @@
-:root{
-  --bg:#070b14;
-  --bg2:#0b1330;
-  --card: rgba(255,255,255,.06);
-  --border: rgba(255,255,255,.12);
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.70);
-  --accent:#4aa3ff;
-  --shadow: 0 14px 40px rgba(0,0,0,.35);
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdelmedjid — Portfolio</title>
+  <meta name="description" content="Portfolio — Abdelmedjid, ingénieur électronique & télécoms (radio, réseaux, optimisation, projets)." />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-*{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(1200px 800px at 15% 5%, rgba(74,163,255,.18), transparent 55%),
-    radial-gradient(900px 600px at 90% 15%, rgba(120,60,255,.16), transparent 55%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
-}
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">Abdelmedjid</a>
+      <nav class="menu">
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#experience">Expérience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="burger" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
 
-.container{ width:min(1100px, 92vw); margin:0 auto; }
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="badge">Disponible — Stage fin d’études (mars/avril 2026)</p>
+          <h1>
+            Ingénieur <span class="accent">Électronique & Télécoms</span><br />
+            Radio (RAN), Réseaux & Projets
+          </h1>
+          <p class="subtitle">
+            Je travaille sur la planification / optimisation radio (2G–5G), l’analyse KPI (RSRP, SINR…),
+            et la conduite de projets télécoms. Basé à <b>Limoges (Nouvelle-Aquitaine)</b>.
+          </p>
 
-.topbar{
-  position:sticky; top:0; z-index:10;
-  backdrop-filter: blur(10px);
-  background: rgba(7,11,20,.55);
-  border-bottom:1px solid var(--border);
-}
+          <div class="cta">
+            <a class="btn primary" href="assets/cv.pdf" target="_blank" rel="noopener">📄 Télécharger mon CV</a>
+            <a class="btn ghost" href="#projects">Voir mes projets</a>
+          </div>
 
-.nav{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
-}
+          <div class="links">
+            <a href="mailto:aliabdelmedjid@gmail.com">✉️ aliabdelmedjid@gmail.com</a>
+            <a href="https://linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3" target="_blank" rel="noopener">in LinkedIn</a>
+            <a href="https://github.com/" target="_blank" rel="noopener">⌂ GitHub</a>
+          </div>
+        </div>
 
-.brand{
-  color:var(--text);
-  text-decoration:none;
-  font-weight:800;
-  letter-spacing:.2px;
-}
+        <div class="hero-right">
+          <div class="card profile">
+            <div class="avatar" aria-hidden="true">A</div>
+            <div>
+              <h3>Abdelmedjid M.H Ali</h3>
+              <p>Électronique & Télécommunications • Radio / Réseaux</p>
+              <div class="mini">
+                <span>📍 Limoges</span>
+                <span>🚗 Permis B</span>
+                <span>🇫🇷 FR / 🇬🇧 EN</span>
+              </div>
+            </div>
+          </div>
 
-.menu{ display:flex; gap:18px; }
-.menu a{
-  color:var(--muted);
-  text-decoration:none;
-  font-weight:600;
-}
-.menu a:hover{ color:var(--text); }
+          <div class="card stats">
+            <div>
+              <h4>Focus</h4>
+              <p>RAN • KPI • Couverture • Drive test • Reporting</p>
+            </div>
+            <div>
+              <h4>Outils</h4>
+              <p>Atoll • Excel • MATLAB • Python • AutoCAD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.burger{
-  display:none;
-  border:1px solid var(--border);
-  background:transparent;
-  color:var(--text);
-  padding:8px 10px;
-  border-radius:10px;
-}
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projets</h2>
+        <p class="section-sub">Quelques projets représentatifs (tu peux en ajouter autant que tu veux).</p>
 
-.hero{
-  padding:64px 0 30px;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap:26px;
-  align-items:start;
-}
+        <div class="grid">
+          <article class="card item">
+            <h3>Planification Radio 5G (Atoll)</h3>
+            <p>Analyse SS-RSRP / SINR, tilt/azimut, optimisation et reporting.</p>
+            <div class="tags">
+              <span>Atoll</span><span>5G</span><span>Couverture</span>
+            </div>
+          </article>
 
-.badge{
-  display:inline-flex;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.04);
-  padding:7px 12px;
-  border-radius:999px;
-  color:var(--muted);
-  margin:0 0 14px;
-}
+          <article class="card item">
+            <h3>Station mobile POCSAG</h3>
+            <p>Acquisition RF et traitement sous Python, analyse des signaux.</p>
+            <div class="tags">
+              <span>RF</span><span>Python</span><span>Analyse</span>
+            </div>
+          </article>
 
-h1{
-  font-size: clamp(30px, 3.6vw, 46px);
-  line-height:1.08;
-  margin:0 0 12px;
-}
-.accent{ color:var(--accent); }
+          <article class="card item">
+            <h3>Réseau fibre optique (étude)</h3>
+            <p>Conception multi-sites, étude de faisabilité et dimensionnement.</p>
+            <div class="tags">
+              <span>FTTH</span><span>Architecture</span><span>Projet</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-.subtitle{
-  margin:0 0 18px;
-  color:var(--muted);
-  line-height:1.55;
-}
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Compétences</h2>
+        <div class="grid">
+          <div class="card item">
+            <h3>Réseaux radio & mobiles</h3>
+            <p>2G/3G/4G/5G, KPI (RSRP, SINR), couverture, optimisation.</p>
+          </div>
+          <div class="card item">
+            <h3>Réseaux IP</h3>
+            <p>VLAN, VPN, NAT, LAN/WAN (notions de routage).</p>
+          </div>
+          <div class="card item">
+            <h3>Gestion de projets</h3>
+            <p>Planification, coordination, suivi délais/coûts, reporting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.cta{ display:flex; gap:12px; flex-wrap:wrap; margin: 18px 0 14px; }
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:11px 14px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:700;
-  border:1px solid var(--border);
-}
-.btn.primary{
-  background: linear-gradient(180deg, rgba(74,163,255,.35), rgba(74,163,255,.12));
-  color:var(--text);
-}
-.btn.ghost{ background: rgba(255,255,255,.04); color:var(--text); }
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Expérience</h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Stagiaire chef de projet — XLIM <span>2025</span></h3>
+              <p>Outils MATLAB, analyse de données techniques, documentation.</p>
+            </div>
+          </div>
 
-.links{ display:flex; gap:14px; flex-wrap:wrap; }
-.links a{ color:var(--muted); text-decoration:none; font-weight:600; }
-.links a:hover{ color:var(--text); }
+          <div class="tl-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Stagiaire RAN — Moov Africa Tchad <span>2023–2024</span></h3>
+              <p>Optimisation radio, analyse KPI, couverture, support planification.</p>
+            </div>
+          </div>
 
-.card{
-  border:1px solid var(--border);
-  background: var(--card);
-  border-radius:18px;
-  box-shadow: var(--shadow);
-}
+          <div class="tl-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Assistant chef de projet — AlbideyNet <span>2022–2023</span></h3>
+              <p>Suivi projets fibre/radio, coordination terrain, conformité, reporting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.profile{
-  display:flex; gap:14px; align-items:center;
-  padding:16px;
-}
-.avatar{
-  width:52px; height:52px; border-radius:16px;
-  display:grid; place-items:center;
-  font-weight:900;
-  background: linear-gradient(180deg, rgba(74,163,255,.45), rgba(120,60,255,.25));
-}
-.profile h3{ margin:0; }
-.profile p{ margin:4px 0 0; color:var(--muted); }
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-sub">Écrivez-moi et je réponds rapidement.</p>
 
-.mini{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; color:var(--muted); font-weight:600; }
-.stats{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:12px;
-  padding:16px;
-  margin-top:14px;
-}
-.stats h4{ margin:0 0 6px; }
-.stats p{ margin:0; color:var(--muted); line-height:1.45; }
+        <div class="contact-grid">
+          <div class="card item">
+            <h3>Email</h3>
+            <a href="mailto:aliabdelmedjid@gmail.com">aliabdelmedjid@gmail.com</a>
+          </div>
+          <div class="card item">
+            <h3>LinkedIn</h3>
+            <a href="https://linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3" target="_blank" rel="noopener">
+              linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3
+            </a>
+          </div>
+          <div class="card item">
+            <h3>Téléphone</h3>
+            <p>+33 7 44 10 85 73</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.section{ padding:44px 0; }
-.section.alt{
-  background: rgba(255,255,255,.02);
-  border-top:1px solid rgba(255,255,255,.06);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-.section h2{ margin:0 0 8px; font-size:28px; }
-.section-sub{ margin:0 0 18px; color:var(--muted); }
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abdelmedjid — Portfolio</p>
+    </div>
+  </footer>
 
-.grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:14px;
-}
-.item{ padding:16px; }
-.item h3{ margin:0 0 8px; }
-.item p{ margin:0; color:var(--muted); line-height:1.5; }
-
-.tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-.tags span{
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.14);
-  color:var(--muted);
-  background: rgba(255,255,255,.03);
-}
-
-.timeline{ display:grid; gap:12px; }
-.tl-item{ display:grid; grid-template-columns: 14px 1fr; gap:12px; align-items:start; }
-.dot{
-  width:12px; height:12px; margin-top:6px;
-  border-radius:999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(74,163,255,.12);
-}
-.tl-item .content{
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.04);
-  border-radius:16px;
-  padding:14px;
-}
-.tl-item h3{ margin:0 0 6px; }
-.tl-item span{ color:var(--muted); font-weight:700; margin-left:8px; }
-.tl-item p{ margin:0; color:var(--muted); line-height:1.55; }
-
-.contact-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:14px;
-}
-.contact-grid a{ color:var(--text); text-decoration:none; }
-.contact-grid a:hover{ text-decoration:underline; }
-
-.footer{
-  padding:22px 0;
-  color:var(--muted);
-  border-top:1px solid rgba(255,255,255,.08);
-}
-
-@media (max-width: 900px){
-  .hero-grid{ grid-template-columns: 1fr; }
-  .grid{ grid-template-columns: 1fr; }
-  .contact-grid{ grid-template-columns: 1fr; }
-  .menu{ display:none; }
-  .menu.open{
-    display:flex;
-    position:absolute;
-    top:58px; right:4vw;
-    flex-direction:column;
-    padding:12px;
-    background: rgba(7,11,20,.9);
-    border:1px solid var(--border);
-    border-radius:14px;
-  }
-  .burger{ display:block; }
-}
+  <script src="script.js"></script>
+</body>
+</html>
