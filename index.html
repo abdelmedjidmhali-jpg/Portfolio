@@ -1,201 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdelmedjid — Portfolio</title>
-  <meta name="description" content="Portfolio — Abdelmedjid, ingénieur électronique & télécoms (radio, réseaux, optimisation, projets)." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Abdelmedjid M.H Ali | Télécoms & éléctronique </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e40af, #0f172a, #020617); }
+    </style>
 </head>
+<body class="bg-[#020617] text-slate-200 antialiased">
 
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#home">Abdelmedjid</a>
-      <nav class="menu">
-        <a href="#projects">Projets</a>
-        <a href="#skills">Compétences</a>
-        <a href="#experience">Expérience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="burger" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+  <section id="profil" class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient pt-20">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-8 animate-pulse">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Disponible pour stage — fin Mars 2026
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
+            Abdelmedjid <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">SADICK</span>
+        </h1>
+
+        <p class="text-lg text-slate-400 leading-relaxed mb-12 max-w-2xl mx-auto">
+            Étudiant <span class="text-blue-400">Ingénieur en Télécommunications et Eléctronique </span> à l'école d'ingénieur (ENSIL-ENSCI) de Limoges. Recherche un stage de fin d'études.
+        </p>
+
+        <div class="flex justify-center items-center space-x-8 mb-16">
+          <a href="mailto:abdelmedjidmhali@gmail.com" class="group transition-all duration-300">
+            <i class="fas fa-envelope text-2xl text-slate-500 group-hover:text-blue-400 group-hover:scale-110"></i>
+          </a>
+          <a href="{https://linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3/" target="_blank" class="group transition-all duration-300">
+            <i class="fab fa-linkedin-in text-2xl text-slate-500 group-hover:text-blue-400 group-hover:scale-110"></i>
+          </a>
+          <a href="{https://linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3" target="_blank" class="group transition-all duration-300">
+            <i class="fas fa-flag text-2xl text-slate-500 group-hover:text-blue-400 group-hover:scale-110"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <a href="cv.html" class="glass p-4 rounded-xl hover:bg-white/5 transition group">
+            <i class="fas fa-file-pdf text-blue-500 mb-2 text-xl"></i>
+            <span class="block text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-white">Mon CV</span>
+          </a>
+          <a href="projets.html" class="glass p-4 rounded-xl hover:bg-white/5 transition group">
+            <i class="fas fa-code text-cyan-400 mb-2 text-xl"></i>
+            <span class="block text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-white">Projets</span>
+          </a>
+          <a href="competences.html" class="glass p-4 rounded-xl hover:bg-white/5 transition group">
+            <i class="fas fa-shield-halved text-blue-500 mb-2 text-xl"></i>
+            <span class="block text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-white">Skills Cyber</span>
+          </a>
+          <a href="experience.html" class="glass p-4 rounded-xl hover:bg-white/5 transition group">
+            <i class="fas fa-network-wired text-cyan-400 mb-2 text-xl"></i>
+            <span class="block text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-white">Expérience</span>
+          </a>
+          <a href="formation.html" class="glass p-4 rounded-xl hover:bg-white/5 transition group">
+            <i class="fas fa-graduation-cap text-blue-500 mb-2 text-xl"></i>
+            <span class="block text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-white">Cursus</span>
+          </a>
+          <a href="contact.html" class="glass p-4 rounded-xl hover:bg-white/5 transition group">
+            <i class="fas fa-paper-plane text-cyan-400 mb-2 text-xl"></i>
+            <span class="block text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-white">Contact</span>
+          </a>
+        </div>
+
+      </div>
     </div>
-  </header>
 
-  <main id="home">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="badge">Disponible — Stage fin d’études (mars/avril 2026)</p>
-          <h1>
-            Ingénieur <span class="accent">Électronique & Télécoms</span><br />
-            Radio (RAN), Réseaux & Projets
-          </h1>
-          <p class="subtitle">
-            Je travaille sur la planification / optimisation radio (2G–5G), l’analyse KPI (RSRP, SINR…),
-            et la conduite de projets télécoms. Basé à <b>Limoges (Nouvelle-Aquitaine)</b>.
-          </p>
-
-          <div class="cta">
-            <a class="btn primary" href="assets/cv.pdf" target="_blank" rel="noopener">📄 Télécharger mon CV</a>
-            <a class="btn ghost" href="#projects">Voir mes projets</a>
-          </div>
-
-          <div class="links">
-            <a href="mailto:aliabdelmedjid@gmail.com">✉️ aliabdelmedjid@gmail.com</a>
-            <a href="https://linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3" target="_blank" rel="noopener">in LinkedIn</a>
-            <a href="https://github.com/" target="_blank" rel="noopener">⌂ GitHub</a>
-          </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 opacity-20">
+        <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
+            <div class="w-1 h-2 bg-white rounded-full animate-bounce"></div>
         </div>
-
-        <div class="hero-right">
-          <div class="card profile">
-            <div class="avatar" aria-hidden="true">A</div>
-            <div>
-              <h3>Abdelmedjid M.H Ali</h3>
-              <p>Électronique & Télécommunications • Radio / Réseaux</p>
-              <div class="mini">
-                <span>📍 Limoges</span>
-                <span>🚗 Permis B</span>
-                <span>🇫🇷 FR / 🇬🇧 EN</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card stats">
-            <div>
-              <h4>Focus</h4>
-              <p>RAN • KPI • Couverture • Drive test • Reporting</p>
-            </div>
-            <div>
-              <h4>Outils</h4>
-              <p>Atoll • Excel • MATLAB • Python • AutoCAD</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projets</h2>
-        <p class="section-sub">Quelques projets représentatifs (tu peux en ajouter autant que tu veux).</p>
-
-        <div class="grid">
-          <article class="card item">
-            <h3>Planification Radio 5G (Atoll)</h3>
-            <p>Analyse SS-RSRP / SINR, tilt/azimut, optimisation et reporting.</p>
-            <div class="tags">
-              <span>Atoll</span><span>5G</span><span>Couverture</span>
-            </div>
-          </article>
-
-          <article class="card item">
-            <h3>Station mobile POCSAG</h3>
-            <p>Acquisition RF et traitement sous Python, analyse des signaux.</p>
-            <div class="tags">
-              <span>RF</span><span>Python</span><span>Analyse</span>
-            </div>
-          </article>
-
-          <article class="card item">
-            <h3>Réseau fibre optique (étude)</h3>
-            <p>Conception multi-sites, étude de faisabilité et dimensionnement.</p>
-            <div class="tags">
-              <span>FTTH</span><span>Architecture</span><span>Projet</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h2>Compétences</h2>
-        <div class="grid">
-          <div class="card item">
-            <h3>Réseaux radio & mobiles</h3>
-            <p>2G/3G/4G/5G, KPI (RSRP, SINR), couverture, optimisation.</p>
-          </div>
-          <div class="card item">
-            <h3>Réseaux IP</h3>
-            <p>VLAN, VPN, NAT, LAN/WAN (notions de routage).</p>
-          </div>
-          <div class="card item">
-            <h3>Gestion de projets</h3>
-            <p>Planification, coordination, suivi délais/coûts, reporting.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Expérience</h2>
-        <div class="timeline">
-          <div class="tl-item">
-            <div class="dot"></div>
-            <div class="content">
-              <h3>Stagiaire chef de projet — XLIM <span>2025</span></h3>
-              <p>Outils MATLAB, analyse de données techniques, documentation.</p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="dot"></div>
-            <div class="content">
-              <h3>Stagiaire RAN — Moov Africa Tchad <span>2023–2024</span></h3>
-              <p>Optimisation radio, analyse KPI, couverture, support planification.</p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="dot"></div>
-            <div class="content">
-              <h3>Assistant chef de projet — AlbideyNet <span>2022–2023</span></h3>
-              <p>Suivi projets fibre/radio, coordination terrain, conformité, reporting.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="section-sub">Écrivez-moi et je réponds rapidement.</p>
-
-        <div class="contact-grid">
-          <div class="card item">
-            <h3>Email</h3>
-            <a href="mailto:aliabdelmedjid@gmail.com">aliabdelmedjid@gmail.com</a>
-          </div>
-          <div class="card item">
-            <h3>LinkedIn</h3>
-            <a href="https://linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3" target="_blank" rel="noopener">
-              linkedin.com/in/abdelmedjid-moussa-hassan-7aa2131a3
-            </a>
-          </div>
-          <div class="card item">
-            <h3>Téléphone</h3>
-            <p>+33 7 44 10 85 73</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Abdelmedjid — Portfolio</p>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
 </body>
 </html>
