@@ -90,17 +90,19 @@
                 <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-10">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Envoyez-moi un message</h3>
                     
-                    <form action="#" class="space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-bold text-gray-500 uppercase mb-2 ml-1">Nom complet</label>
-                                <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all text-sm">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-500 uppercase mb-2 ml-1">Objet</label>
-                                <input type="text" placeholder="Sujet de votre message" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all text-sm">
-                            </div>
-                        </div>
+                    <form action="mailto:abdelmedjidmhali@gmail.com" method="POST" enctype="text/plain">
+
+<input type="text" name="Nom" placeholder="Votre nom" required>
+
+<input type="email" name="Email" placeholder="Votre email" required>
+
+<input type="text" name="Objet" placeholder="Sujet" required>
+
+<textarea name="Message" placeholder="Votre message" required></textarea>
+
+<button type="submit">Envoyer</button>
+
+</form>
                         
                         <div>
                             <label class="block text-xs font-bold text-gray-500 uppercase mb-2 ml-1">Message</label>
